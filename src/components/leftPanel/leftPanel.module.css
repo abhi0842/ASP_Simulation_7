@@ -1,0 +1,67 @@
+.leftPanelContainer {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+    background-color: transparent;
+}
+
+.mainStack {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+    min-width: 0;
+    align-items: stretch;
+}
+
+.contentGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr));
+    gap: 24px;
+    width: 100%;
+    min-width: 0;
+    align-items: stretch;
+}
+
+.contentGridFull {
+    grid-column: 1 / -1;
+}
+
+.noisyFilteredRow {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+    min-width: 0;
+    align-items: stretch;
+}
+
+.chartSection {
+    width: 100%;
+    min-width: 0;
+}
+
+@media (max-width: 768px) {
+    .mainStack {
+        gap: 16px;
+    }
+
+    .contentGrid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .noisyFilteredRow {
+        gap: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .mainStack {
+        gap: 14px;
+    }
+
+    .contentGrid {
+        gap: 14px;
+    }
+}

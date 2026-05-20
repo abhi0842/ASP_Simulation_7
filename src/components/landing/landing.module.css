@@ -1,0 +1,63 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  padding: 60px 40px;
+}
+
+.title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #1D7480;
+  text-decoration: underline;
+  margin: 0;
+}
+
+.btnRow {
+  display: flex;
+  gap: 20px;
+}
+
+.algoBtn {
+  padding: 12px 36px;
+  background: #B5D4F4;
+  color: #1a3a5c;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.algoBtn:hover {
+  background: #85B7EB;
+}
+
+.algoBtn.selected {
+  background: #85B7EB;
+  color: #042C53;
+}
+
+.subBtn {
+  padding: 12px 32px;
+  background: #B5D4F4;
+  color: #1a3a5c;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.subBtn:hover {
+  background: #85B7EB;
+}
+
+.hint {
+  font-size: 14px;
+  color: #555;
+  margin: 0;
+}

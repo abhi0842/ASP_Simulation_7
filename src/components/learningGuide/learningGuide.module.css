@@ -1,0 +1,27 @@
+.guide {
+  margin: 0;
+  padding: 12px 14px;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  background: #f8fafc;
+  color: #1e293b;
+  font-size: 13px;
+  line-height: 1.5;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.guideTitle {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 13px;
+}
+
+.guideBody ul {
+  margin: 6px 0 0 16px;
+  padding: 0;
+}
+
+.guideBody p {
+  margin: 4px 0 0;
+}
