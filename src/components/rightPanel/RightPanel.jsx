@@ -43,6 +43,7 @@ export const RightPanel = () => {
     parseUploadedText,
     commitParsedSignal,
     setAlgorithmMeta,
+    markAction,
   } = useContext(SimulationContext);
 
   const [lmsM, setLmsM] = useState(5);
@@ -134,6 +135,7 @@ export const RightPanel = () => {
     } else {
       setGenerateECG(true);
     }
+    markAction("GENERATE_SIGNAL");
   };
 
   const buildFilterConfig = () => ({
@@ -175,6 +177,7 @@ export const RightPanel = () => {
   const handleAlgoChange = (e) => {
     setAlgoResults(null);
     setSelectedAlgo(String(e.target.value));
+    markAction("SELECT_ALGO");
   };
 
   const handleModeChange = (e) => {
@@ -227,6 +230,7 @@ export const RightPanel = () => {
     if (payload) {
       lastRunRef.current = { key: runKey, payload };
       setAlgoResults(payload);
+      markAction("RUN_ALGORITHM");
     }
   };
 

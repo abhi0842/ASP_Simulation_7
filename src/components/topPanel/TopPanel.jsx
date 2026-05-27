@@ -3,9 +3,20 @@ import styles from "./topPanel.module.css";
 import { SimulationContext } from "../../context/SimulationContext.jsx";
 
 export const TopPanel = () => {
-  const { showInstruction, setShowInstruction, buttonRef, screen } = useContext(SimulationContext);
+  const { showInstruction, setShowInstruction, buttonRef, screen, guideActive, setGuideActive, setStep } = useContext(SimulationContext);
 
   const toggleInstruction = () => setShowInstruction(!showInstruction);
+
+  const toggleGuide = () => {
+    if (!guideActive) {
+      setStep(0);
+      setGuideActive(true);
+    } else {
+      setGuideActive(false);
+      setShowInstruction(false);
+      setStep(0);
+    }
+  };
 
   return (
     <div className={styles.Container}>
@@ -18,6 +29,15 @@ export const TopPanel = () => {
               <button ref={buttonRef} className={styles.panelButton} onClick={toggleInstruction}>
                 <span className={styles.buttonIcon}>ℹ️</span>
                 Instructions
+              </button>
+              <button
+                id="guideButton"
+                className={styles.panelButton}
+                onClick={toggleGuide}
+                style={{ backgroundColor: guideActive ? '#2ecc71' : '' }}
+              >
+                <span className={styles.buttonIcon}>🚀</span>
+                Guided Tutor
               </button>
             </>
           )}
